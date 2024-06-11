@@ -1,15 +1,12 @@
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #f8f9fa;
-  
-    &__logo {
-      max-width: 100px;
+    padding: 1.5rem 2rem;  
+    .logo {
+      max-width: 18rem;
     }
-  
-    &__nav-list {
+    .nav-list {
       display: flex;
       gap: 1rem;
     }
