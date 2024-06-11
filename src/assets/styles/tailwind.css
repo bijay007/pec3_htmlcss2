@@ -9,3 +9,10 @@
 .footer-section {
     @apply grid grid-cols-2 place-items-center p-2;
 }
+
+.br-5 {
+    border-radius: 5px;
+}
+.fs-2 {
+    font-size: 2rem;
+}
