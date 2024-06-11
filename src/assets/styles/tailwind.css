@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Common utility css classes */
+.logo {
+    @apply max-w-72;
+}
+.footer-section {
+    @apply grid grid-cols-2 place-items-center p-2;
+}
