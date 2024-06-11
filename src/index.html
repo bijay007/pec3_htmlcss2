@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <!-- do not remove this line! -->
+    <title>Festival of MOMO Makers</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  <body class="flex flex-col min-h-screen">
+    <include src="views/header.html"></include>
+    <main class="flex-grow">
+      <section class="relative">
+        <img src="assets/images/banner.jpg" alt="Festival Banner"
+          class="w-full h-auto">
+        <div class="absolute bottom-4 left-4 text-white">
+          <h1 class="text-3xl font-bold">The sacred festival of MOMO makers</h1>
+          <p>Participate to show your skills and win amazing prizes</p>
+          <button
+            class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Let's
+            go</button>
+        </div>
+      </section>
+    </main>
+    <include src="views/footer.html"></include>
+    <script>
+      document.querySelectorAll('include').forEach(el => {
+        fetch(el.getAttribute('src'))
+          .then(response => response.text())
+          .then(data => el.outerHTML = data);
+      });
+    </script>
   </body>
 </html>

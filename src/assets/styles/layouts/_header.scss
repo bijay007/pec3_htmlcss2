@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+  
+    &__logo {
+      max-width: 100px;
+    }
+  
+    &__nav-list {
+      display: flex;
+      gap: 1rem;
+    }
+}
