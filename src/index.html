@@ -10,31 +10,7 @@
   </head>
   <body class="flex flex-col min-h-screen bg-blue-200">
     <include src="views/header.html"></include>
-    <main class="flex flex-col">
-      <section>
-        <img src="assets/images/banner.jpg" alt="Festival Banner"
-          class="w-full h-auto banner-img">
-        <div
-          class="flex flex-col place-items-center py-10 text-center banner-text">
-          <h1 class="text-3xl font-bold py-2">The sacred festival of MOMO makers
-          </h1>
-          <p class="font-normal py-4 text-xl">Participate to show
-            your skills and
-            win
-            amazing prizes</p>
-          <button
-            class="bg-blue-500 rounded hover:bg-blue-700 text-xl font-bold br-5 banner-btn">Let's
-            go</button>
-        </div>
-      </section>
-    </main>
+    <include src="views/home.html"></include>
     <include src="views/footer.html"></include>
-    <script>
-      document.querySelectorAll('include').forEach(el => {
-        fetch(el.getAttribute('src'))
-          .then(response => response.text())
-          .then(data => el.outerHTML = data);
-      });
-    </script>
   </body>
 </html>
